@@ -1,0 +1,122 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "mysql"
+  url      =  "mysql://root:suriya@05@localhost:3306/book-store"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Admin {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+}
+
+model Book {
+  id        Int      @id @default(autoincrement())
+  name      String
+  author    String
+  category  String
+  imageUrl  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Define the Department model
+
+
+// Define the Student model
+model Student {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+  department   String
+}
+
+
+model AutoMobile {
+   id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Civil {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Cse {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Ece {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Eee {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Mech {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model It {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Mca {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
+
+model Mba {
+  id           Int        @id @default(autoincrement())
+  username     String @unique
+  password     String
+  roll         String 
+  year         String
+  degree       String
+}
